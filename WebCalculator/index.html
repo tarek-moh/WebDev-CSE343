@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link rel="stylesheet" href="styles.css" />
+        <script src="index.js" defer></script>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <div id="root">
+            <div id="display">0</div>
+            <div id="buttons">
+                <button onclick="update('1')" class="digit">1</button>
+                <button onclick="update('2')" class="digit">2</button>
+                <button onclick="update('3')" class="digit">3</button>
+                <button onclick="update('+')" class="operator">+</button>
+                <button onclick="update('4')" class="digit">4</button>
+                <button onclick="update('5')" class="digit">5</button>
+                <button onclick="update('6')" class="digit">6</button>
+                <button onclick="update('-')" class="operator">-</button>
+                <button onclick="update('7')" class="digit">7</button>
+                <button onclick="update('8')" class="digit">8</button>
+                <button onclick="update('9')" class="digit">9</button>
+                <button onclick="update('*')" class="operator">*</button>
+                <button onclick="update('0')" class="digit">0</button>
+                <button onclick="update('.')" class="decimal">.</button>
+                <button onclick="update('/')" class="operator">/</button>
+                <button onclick="update('=')" class="equals">=</button>
+                <button onclick="reset()" class="clear">AC</button>
+            </div>
+        </div>
+    </body>
+
+</html>
