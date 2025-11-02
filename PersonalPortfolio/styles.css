@@ -157,3 +157,7 @@ footer {
   background-color: #ffa13d; /* warm amber accent */
 
 }
+
+img{
+  object-fit: cover;
+}
