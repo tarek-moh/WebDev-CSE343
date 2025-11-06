@@ -3,6 +3,13 @@ let rhs = '';
 let operator = '';
 
 let display = document.getElementById('display');
+let buttons = document.getElementById('buttons');
+Array.from(buttons.children).forEach(button => {
+    console.log(button);
+    button.addEventListener('click', () => {
+        update(button.innerHTML);
+    });
+});
 
 function update(value) {
 
@@ -30,6 +37,9 @@ function update(value) {
         calculate();
     }
 
+    if (value === 'AC') {
+        reset();
+    }
 }
 
 function calculate()
