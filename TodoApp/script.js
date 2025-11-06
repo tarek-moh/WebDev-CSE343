@@ -39,8 +39,10 @@ filterButtons.forEach(button => {
     button.addEventListener('click', handleFilter);
 });
 
-function handleFilter() {
-    const filter = this.dataset.filter;
+function handleFilter(event) {
+    const filter = event.target.getAttribute('data-filter');
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
     
     if(filter === 'all') {
         Array.from(list.children).forEach(item => {
