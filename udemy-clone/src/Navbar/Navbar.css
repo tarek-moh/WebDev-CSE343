@@ -1,0 +1,198 @@
+/* Navbar container */
+.navbar {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  font-family: sans-serif;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.navbar-container {
+  padding: 0 24px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Logo & Explore */
+.logo-explore {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 91px;
+  height: 34px;
+}
+
+.explore-link {
+  font-size: 0.875rem; /* text-sm */
+  color: #374151; /* gray-700 */
+  padding: 12px 12px;
+  font-weight: 500;
+  margin-left: 8px;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.explore-link:hover {
+  color: #5624d0;
+  background-color: #ece4ff ;
+  border: none;
+}
+
+/* Dropdown box */
+.explore-dropdown {
+  position: absolute;
+  top: 60px;
+  left: 120px;
+  width: 240px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 8px 0;
+  z-index: 20;
+  border-radius: 4px;
+  margin: 12px;
+}
+
+.hover-bridge {
+  position: absolute;
+  top: 50px;        /* distance between button & dropdown */
+  left: 0;
+  width: 100%;
+  height: 30px;     /* height of the invisible bridge */
+  background: transparent;
+  z-index: 10;
+}
+
+/* Dropdown item */
+.dropdown-item {
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #374151;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f3f4f6;
+  color: #5624d0;
+}
+
+/* Search Bar */
+.search-bar-container {
+  flex-grow: 1;
+  padding-right: 100px;
+}
+
+.search-bar {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 16px;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.search-icon:hover {
+  color: #5624d0;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px 12px 48px; /* top/right/bottom/left */
+  font-size: 0.875rem;
+  color: #374151;
+  border: 1px solid #000;
+  border-radius: 9999px; /* pill shape */
+  background-color: transparent;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #6b7280; /* placeholder-gray-500 */
+}
+
+/* Text links */
+.text-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.text-links a {
+  font-size: 0.875rem;
+  color: #374151;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.text-links a:hover {
+  color: #5624d0;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  padding: 8px;
+  background-color: #fff;
+  color: black;
+  border: 1px solid #5624d0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.icon-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.login-btn {
+  padding: 0 16px;
+  height: 40px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #111827;
+  background-color: #fff;
+  border: 1px solid #5624d0; /* purple border */
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.signup-btn {
+  padding: 0 16px;
+  height: 40px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #7c3aed;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signup-btn:hover {
+  background-color: #5624d0;
+}
+
