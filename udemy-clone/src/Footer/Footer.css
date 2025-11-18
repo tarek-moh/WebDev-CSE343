@@ -1,0 +1,227 @@
+/* ------------------------------------ */
+/* Global Footer Styling */
+/* ------------------------------------ */
+
+.udemy-footer {
+    width: 100%;
+    background-color: #1c1d1f; /* Main dark background color */
+    font-family: Arial, sans-serif;
+    color: #f7f9fa; /* Light text color */
+}
+
+/* ------------------------------------ */
+/* 1. TOP BAR: Business & Logos */
+/* ------------------------------------ */
+
+.footer-top-bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #3e4143; /* Separator line */
+}
+
+.business-text {
+    font-size: 16px;
+    margin: 0;
+    color: #f7f9fa;
+}
+
+.business-text strong {
+    color: #f7f9fa;
+}
+
+.logo-strip {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.partner-logo {
+    height: 25px; /* Fixed height for consistent look */
+    /* Add grayscale filter to logos */
+    filter: brightness(0) invert(1) opacity(0.8);
+    background-color: transparent;
+}
+
+/* ------------------------------------ */
+/* 2. MAIN LINK SECTION */
+/* ------------------------------------ */
+
+.footer-main-links-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.main-section-heading {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f7f9fa;
+    margin: 0 0 24px 0;
+}
+
+.main-grid-row {
+    display: grid;
+    /* Create 4 equal columns */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px 40px;
+    margin-bottom: 32px;
+}
+
+/* Style for the link sections */
+.section-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #f7f9fa;
+    margin: 0 0 8px 0;
+}
+
+.link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link-item {
+    font-size: 13px;
+    color: #c0c4c6; /* Slightly lighter gray for link text */
+    text-decoration: none;
+    line-height: 1.8;
+    display: block;
+    transition: color 0.2s;
+}
+
+.footer-link-item:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* ------------------------------------ */
+/* 3. UTILITY LINKS SECTION */
+/* ------------------------------------ */
+
+.footer-utility-links-wrapper {
+    background-color: #292a2c; /* Slightly darker background for this section */
+    padding: 40px 20px;
+    border-top: 1px solid #3e4143; 
+    border-bottom: 1px solid #3e4143;
+}
+
+.utility-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* Create 4 equal columns */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 40px;
+}
+
+
+/* ------------------------------------ */
+/* 4. BOTTOM BAR: Logo, Copyright, Language */
+/* ------------------------------------ */
+
+.footer-bottom-bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.udemy-logo-white {
+    width: 91px;
+    height: auto;
+}
+
+.copyright-text {
+    font-size: 13px;
+    color: #c0c4c6;
+}
+
+.bottom-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.settings-link {
+    font-size: 13px;
+    color: #c0c4c6;
+    text-decoration: none;
+}
+
+/* Language Button Styling */
+.language-button {
+    background-color: transparent;
+    border: 1px solid #f7f9fa;
+    color: #f7f9fa;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.language-button svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ------------------------------------ */
+/* Responsive Adjustments */
+/* ------------------------------------ */
+
+@media (max-width: 1024px) {
+    .main-grid-row {
+        /* Switch to 3 columns on smaller desktops */
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .utility-grid {
+        /* Switch to 3 columns */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .logo-strip {
+        gap: 20px;
+    }
+    .main-grid-row, .utility-grid {
+        /* Switch to 2 columns on tablets */
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-bottom-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-grid-row, .utility-grid {
+        /* Stack columns vertically on mobile */
+        grid-template-columns: 1fr;
+    }
+    .main-grid-row, .utility-grid, .footer-bottom-bar {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Navbar from '/src/Navbar/Navbar.jsx'
-import LoginLanding from '/src/LoginLanding/LoginLanding.jsx'
+import Landing from '/src/Landing/Landing.jsx'
+import Footer from '/src/Footer/Footer.jsx'
 import './App.css'
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
   return (
     <>
       <Navbar />
-      <LoginLanding />
+      <Landing />
+      <Footer />
     </>
   )
 }

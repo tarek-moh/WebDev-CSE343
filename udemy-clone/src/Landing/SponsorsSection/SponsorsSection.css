@@ -1,0 +1,23 @@
+.sponsors-section {
+    background-color: #f7f7f7;
+    color: rgb(80, 80, 80);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.sponsors-text{
+    font-size: 18px;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+.sponsors-logos
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+

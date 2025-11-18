@@ -12,7 +12,7 @@ export default function Navbar() {
         <div className="logo-explore">
           <a href="#" className="logo-link">
             <img
-              src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
+              src="/src/assets/logo-udemy.svg"
               alt="Udemy"
               className="logo"
             />

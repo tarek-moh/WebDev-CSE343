@@ -1,0 +1,258 @@
+/* ------------------------------------ */
+/* 1. LAYOUT CONTAINER */
+/* ------------------------------------ */
+
+.course-listing-container {
+    max-width: 1340px; 
+    margin: 40px auto; /* Add vertical spacing */
+    padding: 0 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.listing-header {
+    margin-bottom: 24px;
+}
+
+.main-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1c1d1f;
+    margin: 0;
+}
+
+.main-subtitle {
+    font-size: 16px;
+    color: #4f5256;
+    margin: 8px 0 0 0;
+}
+
+/* ------------------------------------ */
+/* 2. CATEGORY TABS */
+/* ------------------------------------ */
+
+.category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #d1d7dc; /* Separator line below tabs */
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 12px 0; /* Padding for the text link style */
+    font-size: 16px;
+    font-weight: 700;
+    color: #6a6f73;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.tab-button:hover {
+    color: #1c1d1f;
+}
+
+.tab-button.active {
+    color: #1c1d1f;
+}
+
+/* The purple underline for the active tab */
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; /* Overlap the border */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #5624d0; /* Udemy Purple */
+}
+
+/* ------------------------------------ */
+/* 3. COURSE CARDS ROW (Horizontal Layout) */
+/* ------------------------------------ */
+
+.course-cards-row {
+    display: flex;
+    overflow-x: scroll; /* Enable horizontal scrolling if cards exceed width */
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding-bottom: 20px; /* Space for shadow/scrollbar */
+    position: relative; /* Context for arrow */
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.course-cards-row::-webkit-scrollbar {
+    display: none;
+}
+
+/* ------------------------------------ */
+/* 4. INDIVIDUAL COURSE CARD */
+/* ------------------------------------ */
+
+.course-card {
+    flex-shrink: 0; /* Important: prevents cards from shrinking */
+    width: 240px; /* Fixed width matching the typical Udemy card size */
+    background-color: white;
+    box-shadow: 0 0 0 1px #d1d7dc; /* Light border/outline */
+    border-radius: 4px;
+    transition: box-shadow 0.2s;
+    scroll-snap-align: start;
+    cursor: pointer;
+}
+
+.course-card:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-image-wrapper {
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.card-content {
+    padding: 12px;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1c1d1f;
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+    /* Limit title to 2 lines */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.card-headline {
+    font-size: 14px;
+    color: #4f5256;
+    margin: 4px 0;
+}
+
+.card-author {
+    font-size: 12px;
+    color: #6a6f73;
+    margin: 4px 0;
+}
+
+/* --- Rating and Pricing --- */
+
+.rating-container {
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+}
+
+.rating-number {
+    font-size: 14px;
+    font-weight: 700;
+    color: #b4690e; /* Rating number color (orange/yellow tint) */
+    margin-right: 4px;
+}
+
+.star-icon {
+    font-size: 14px;
+    line-height: 1;
+}
+
+.review-count {
+    font-size: 12px;
+    color: #6a6f73;
+    margin-left: 4px;
+}
+
+.card-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1c1d1f;
+    margin: 8px 0 0 0;
+}
+
+
+/* --- Badges --- */
+
+.course-badge, .premium-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1c1d1f;
+    background-color: #ffe799; /* Bestseller Yellow */
+    z-index: 5;
+}
+
+.course-badge[class*="Hot & New"] {
+    background-color: #cf848c; /* Hot & New Reddish tone */
+    color: white;
+}
+
+.premium-badge {
+    background-color: #9026b4; /* Premium Purple */
+    color: white;
+    top: auto;
+    bottom: 8px;
+    left: 8px;
+}
+
+/* --- Footer Link --- */
+
+.footer-link {
+    display: block;
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #5624d0; /* Udemy Purple */
+    text-decoration: none;
+    transition: color 0.2s;
+    width: fit-content;
+}
+
+.footer-link:hover {
+    color: #8710d8;
+    text-decoration: underline;
+}
+
+/* --- Carousel Arrow Placeholder --- */
+
+/* This simulates the last arrow visible on the right edge */
+.carousel-arrow-placeholder {
+    flex-shrink: 0;
+    position: sticky;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 48px;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; /* Allows clicks through to elements underneath */
+}
+
+.carousel-arrow-placeholder svg {
+    width: 24px;
+    height: 24px;
+    color: #1c1d1f;
+    background-color: white;
+    border: 1px solid #d1d7dc;
+    border-radius: 50%;
+    padding: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    pointer-events: all; /* Make the arrow icon clickable */
+    cursor: pointer;
+}

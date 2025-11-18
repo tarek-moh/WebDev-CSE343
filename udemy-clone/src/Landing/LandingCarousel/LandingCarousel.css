@@ -1,0 +1,148 @@
+/* ------------------------------------ */
+/* 1. CAROUSEL WRAPPER (Outer Container) */
+/* ------------------------------------ */
+
+.landing-carousel {
+    /* Limit max width to match the usual website content width */
+    max-width: 1340px; 
+    width: 100%;
+    margin: 20px auto 0 auto; /* Center the carousel below the navbar */
+    position: relative;
+    overflow: hidden;
+    
+    /* Ensure the wrapper doesn't affect the padding */
+    padding: 0; 
+}
+
+/* ------------------------------------ */
+/* 2. SLIDE CONTAINER (Background Image) */
+/* ------------------------------------ */
+
+.slide-content {
+    height: 400px; /* Fixed height for the carousel area */
+    
+    /* Required for the absolute positioning of the .carousel-card */
+    position: relative; 
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Ensure the background is dark/solid enough to see the white card */
+    /* Add a subtle overlay if needed: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)) */
+}
+
+/* ------------------------------------ */
+/* 3. INFO CARD (White Box) */
+/* ------------------------------------ */
+
+.carousel-card {
+    /* Absolute positioning to float the card in the top-left corner */
+    position: absolute; 
+    top: 50px; /* Distance from the top */
+    left: 70px; /* Distance from the left */
+
+    width: 440px; /* Fixed width to match the Udemy layout */
+    padding: 24px;
+    background-color: white;
+    
+    /* Styling to match Udemy's shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ------------------------------------ */
+/* 4. TYPOGRAPHY & BUTTON */
+/* ------------------------------------ */
+
+/* Udemy uses a bold, serif-like font for the hero title */
+.card-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1c1d1f; /* Dark text color */
+    margin: 0 0 16px 0;
+    line-height: 1.25;
+}
+
+/* Udemy uses a standard sans-serif for the paragraph text */
+.card-text {
+    font-size: 19px;
+    color: #1c1d1f;
+    margin: 0 0 16px 0;
+    line-height: 1.4;
+}
+
+/* Sign Up Button Styling (Purple based on the screenshot) */
+.signup-btn {
+    background-color: #a435f0; /* Udemy Purple */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.signup-btn:hover {
+    background-color: #8710d8; /* Slightly darker purple on hover */
+}
+
+/* ------------------------------------ */
+/* 5. REACT SLICK CUSTOMIZATION */
+/* ------------------------------------ */
+
+/* Style the navigation dots */
+.slick-dots {
+    bottom: 20px; /* Move dots up from the bottom of the carousel */
+}
+
+.slick-dots li button:before {
+    font-size: 10px;
+    color: white !important; /* Make dots white (if carousel has dark background) */
+}
+
+/* Style the navigation arrows (Previous/Next) */
+.slick-prev:before, .slick-next:before {
+    color: #1c1d1f !important; /* Make arrows visible (dark) */
+    font-size: 30px;
+}
+
+/* Position the arrows relative to the image edges */
+.slick-prev {
+    left: 25px !important;
+    z-index: 15; /* Ensure arrows are above other content */
+}
+
+.slick-next {
+    right: 25px !important;
+    z-index: 15;
+}
+
+
+/* ------------------------------------ */
+/* 6. RESPONSIVE DESIGN */
+/* ------------------------------------ */
+
+@media (max-width: 768px) {
+    .slide-content {
+        height: 250px; /* Reduce height on smaller screens */
+    }
+
+    .carousel-card {
+        /* On small screens, move the card to the bottom or hide the carousel */
+        position: static;
+        width: 90%;
+        margin: 20px auto;
+        
+        /* You might choose to hide the carousel card on mobile entirely to match 
+           a mobile-first design, or leave it positioned over the image. */
+    }
+
+    .card-heading {
+        font-size: 24px;
+    }
+
+    .card-text {
+        font-size: 16px;
+    }
+}
