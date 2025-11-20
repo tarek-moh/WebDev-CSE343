@@ -1,0 +1,62 @@
+.advertisement-banner {
+    display: flex; /* Splits the left and right sides */
+    justify-content: space-between;
+    background-color: #1f242f; /* Dark background */
+    color: white;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 80px auto;
+    border-radius: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.ad-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.ad-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.ad-content-left {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.ad-content-right {
+    flex: 1;
+    /* Add styles for your image grid here */
+}
+
+.ad-perks-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 1rem;
+    font: 1em ;
+}
+
+.ad-subtitle {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #d1d5db; /* Lighter text for subtitle */
+}
+
+.ad-button-subtext {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #c0c4c6;
+}
+
+.ad-cta-button {
+    background-color: #ffffff; /* Udemy-like accent color */
+    color: #1f242f;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
