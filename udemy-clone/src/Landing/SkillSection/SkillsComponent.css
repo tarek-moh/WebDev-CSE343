@@ -1,0 +1,178 @@
+/* Container Layout */
+.skills-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 80px auto;
+  max-width: 1400px;
+  padding: 40px;
+  background-color: #f7f9fa; /* Light grey background like Udemy */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Left Side: Text Content */
+.text-content {
+  flex: 0 0 30%; /* Takes up 30% of width */
+  min-width: 250px;
+}
+
+.text-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d2f31;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.text-content p {
+  font-size: 1rem;
+  color: #6a6f73;
+  line-height: 1.5;
+}
+
+/* Right Side: Carousel Area */
+.carousel-wrapper {
+  flex: 1;
+  position: relative;
+  overflow: hidden; /* Hides scrollbar but allows functionality */
+}
+
+.cards-container {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 20px; /* Space for shadows */
+  
+  /* Hide Scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.cards-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* The Skill Card */
+.skill-card {
+  flex: 0 0 300px; /* Fixed width for cards */
+  height: 350px;
+  border-radius: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s;
+  overflow: hidden;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+}
+
+/* The White Info Box inside the card */
+.card-info {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.learner-count {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #6a6f73;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-footer h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2d2f31;
+  margin: 0;
+}
+
+.arrow-icon {
+  background-color: #f7f9fa;
+  border-radius: 50%;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+/* Navigation Controls (Buttons & Dots) */
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 20px;
+}
+
+.nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #2d2f31;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #2d2f31;
+  transition: 0.2s ;
+
+}
+
+.nav-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #d1d7dc;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.dot.active {
+  background-color: #a435f0; /* Udemy Purple */
+  width: 20px; /* Stretched dot effect */
+  border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .skills-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .text-content {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
